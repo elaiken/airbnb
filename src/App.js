@@ -1,5 +1,11 @@
+import React from "react";
 import Home from "./Home";
 import Header from "./Header"
+import Footer from "./Footer";
+import SearchPage from "./SearchPage";
+import './App.css';
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -8,25 +14,32 @@ function App() {
 
     //BEM
     <div className="App">
-
-      <Header />
-      <Home />
-      {/* Home */}
-      {/* Header */}
-
-      {/* Banner */}
-      {/* Search */}
-
-      {/* Cards*/}
-
-      {/* Footer */}
+      <BrowserRouter>
+        <Header />
 
 
-      {/* SearchPage */}
 
-      {/* ... */}
+        <Routes>
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/" element={<Home />} />
 
-    </div>
+
+
+
+
+
+        </Routes>
+
+
+        {/* / */}
+
+        {/* / */}
+
+
+
+        <Footer />
+      </BrowserRouter>
+    </div >
   );
 }
 
